@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+    
+        
+        <h1>  
+        <h:outputText value="Hello #{user.name}"/>  
+        </h1>  
+        <h3><h:outputLabel value="You are #{user.age} years old."></h:outputLabel></h3>  
+        
+ 
+        <h:outputLabel>Your date of birth is: </h:outputLabel>  
+        <h:outputText value="#{user.dob}">  
+            <f:convertDateTime type="both" pattern="dd/mm/yyyy" dateStyle="medium"/>  
+        </h:outputText>  
+        
+        
+        <br/>
+        <h:outputLabel value="Shirt's Price is : "></h:outputLabel>  
+        <h:outputText value="#{user.shirtCost}">  
+             <f:convertNumber pattern="$###" />  
+        </h:outputText>  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <hr/>  
+        <h:outputLabel value="Your date of birth in different-different formats is given below:"></h:outputLabel><br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime type="date" dateStyle="medium"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime type="date" dateStyle="full"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime type="time" dateStyle="full"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime type="date" pattern="dd/mm/yyyy"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime dateStyle="full" pattern="yyyy-mm-dd"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime dateStyle="full" pattern="yyyy.MM.dd 'at' HH:mm:ss z"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime dateStyle="full" pattern="h:mm a"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime dateStyle="long" timeZone="EST" type="both"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime locale="de" timeStyle="long" type="both" dateStyle="full"/>  
+        </h:outputText>  
+        <br/>  
+        <h:outputText value="#{user.dob}">  
+        <f:convertDateTime locale="bn" timeStyle="short" type="both" dateStyle="full"/>  
+        </h:outputText> 
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,6 @@
+venv/
+github.sh
+cmd.sh
+./*/build/
+
+*.sqlite3 # Ignore All SQLite database files
